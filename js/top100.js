@@ -3,12 +3,12 @@ var movies = [
 ['tt0068646', 'The Godfather'],
 ['tt0071562', 'The Godfather: Part II'],
 ['tt0060196', 'The Good, the Bad and the Ugly'],
-['tt0110912', 'Pulp Fiction'],
+['tt0110912', 'Pulp Fiction', 'x9kxjn'],
 ['tt0050083', '12 Angry Men'],
 ['tt0108052', 'Schindler\'s List'],
 ['tt0073486', 'One Flew Over the Cuckoo\'s Nest'],
-['tt0468569', 'The Dark Knight'],
-['tt1375666', 'Inception'],
+['tt0468569', 'The Dark Knight', 'xjz9xy'],
+['tt1375666', 'Inception', 'xboq9i'],
 ['tt0167260', 'The Lord of the Rings: The Return of the King'],
 ['tt0080684', 'Star Wars: Episode V - The Empire Strikes Back'],
 ['tt0047478', 'Seven Samurai'],
@@ -255,7 +255,21 @@ $(document).ready(function(){
     var body = $('body');
     for (var i in movies)
     {
-        body.append('<div class="movie" style="background-image: url(http://cdn.cldrszr.co/mod=fill&w=182&h=275&quality=100&imdb=' + movies[i][0] + ')"><div class="info">' + movies[i][1] + '</div></div>');
+        var movieId = movies[i][0];
+        var videoId = 'x9kxjn';
+        if (movies[i][2])
+        {
+            videoId = movies[i][2];
+        }
+        
+        body.append('<div class="movie" style="background-image: url(http://cdn.cldrszr.co/mod=fill&w=182&h=275&quality=100&imdb=' + movieId + ')" data-movie-id="' + movieId + '" data-video-id="' + videoId + '"><div class="info">' + movies[i][1] + '</div></div>');
     };
-    $("img[title]").tooltip();
-})
+    $('.movie').click(function(){
+        jQuery.facebox({ div: '#box' });
+        $('.content').html('<div class="movie_big" style="background-image: url(http://cdn.cldrszr.co/mod=fill&w=250&h=378&quality=100&imdb=' + $(this).attr('data-movie-id') + ')"></div><iframe frameborder="0" src="http://www.dailymotion.com/embed/video/' + $(this).attr('data-video-id') +  '?autoplay=1"></iframe>');
+    });
+    
+    $(document).bind('afterClose.facebox', function(){
+        $('.content').html('');
+    })
+});
