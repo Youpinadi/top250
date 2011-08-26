@@ -46,7 +46,7 @@ body
 
 .popup
 {
-    width: 1120px !important;
+    width: 1043px !important;
 }
 
 .movie_big
@@ -61,5 +61,5 @@ iframe
 {
     float: left;
     height: 378px;
-    width: 868px;
+    width: 793px;
 }

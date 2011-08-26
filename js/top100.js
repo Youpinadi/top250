@@ -261,12 +261,13 @@ $(document).ready(function(){
         {
             videoId = movies[i][2];
         }
-        
-        body.append('<div class="movie" style="background-image: url(http://cdn.cldrszr.co/mod=fill&w=182&h=275&quality=100&imdb=' + movieId + ')" data-movie-id="' + movieId + '" data-video-id="' + videoId + '"><div class="info">' + movies[i][1] + '</div></div>');
+        var url = '/lang/en/relevance/search/' + encodeURIComponent('"' + movies[i][1] + '" trailer');
+        body.append('<div class="movie" style="background-image: url(http://cdn.cldrszr.co/mod=fill&w=182&h=275&quality=100&imdb=' + movieId + ')" data-movie-id="' + movieId + '" data-video-url="' + url + '"><div class="info">' + movies[i][1] + '</div></div>');
     };
     $('.movie').click(function(){
+        console.log($(this).attr('data-video-url'));
         jQuery.facebox({ div: '#box' });
-        $('.content').html('<div class="movie_big" style="background-image: url(http://cdn.cldrszr.co/mod=fill&w=250&h=378&quality=100&imdb=' + $(this).attr('data-movie-id') + ')"></div><iframe frameborder="0" src="http://www.dailymotion.com/embed/video/' + $(this).attr('data-video-id') +  '?autoplay=1"></iframe>');
+        $('.content').html('<div class="movie_big" style="background-image: url(http://cdn.cldrszr.co/mod=fill&w=250&h=378&quality=100&imdb=' + $(this).attr('data-movie-id') + ')"></div><iframe frameborder="0" src="http://www.dailymotion.com/swf/' + $(this).attr('data-video-url') +  '?autoplay=1"></iframe>');
     });
     
     $(document).bind('afterClose.facebox', function(){
