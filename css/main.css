@@ -1,0 +1,38 @@
+body
+{
+    font-size: 16px;
+    margin: auto;
+    font-family: Helvetica;
+    text-align: center;
+    background-color:  #000;
+}
+
+.movie
+{
+    position: relative;
+    margin: 0;
+    width: 182px;
+    height: 275px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.movie .info
+{
+    position: absolute;
+    background-color:  rgba(0,0,0,0.8);
+    height: 60px;
+    width: 182px;
+    bottom: -80px;
+    padding: 10px;
+    font-weight: bold;
+    color: #FFF !important;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    
+}
+
+.movie:hover .info
+{
+    bottom: 0px;
+}
