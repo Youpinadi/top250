@@ -5,7 +5,31 @@ body
     padding: 0px;
     font-family: Helvetica;
     text-align: center;
-    background-color:  #000;
+    background-image:  url(../img/bg.png);
+}
+
+header
+{
+    position: relative;
+    color: #E64D38;
+    margin-bottom: 24px;
+    font-family: 'Share', sans-serif;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 32px;
+    text-align: left;
+}
+
+header iframe
+{
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
+
+header h2
+{
+    font-size: 42px !important;
 }
 
 .movie
@@ -15,6 +39,7 @@ body
     width: 182px;
     height: 275px;
     overflow: hidden;
+    margin: 10px;
     display: inline-block;
 }
 
@@ -30,7 +55,7 @@ body
     color: #FFF !important;
     -moz-transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
-    
+
 }
 
 .movie:hover .info
