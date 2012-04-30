@@ -1,22 +1,21 @@
 body
 {
     font-size: 16px;
+    font-family: 'Share', sans-serif;
     margin: auto;
     padding: 0px;
     font-family: Helvetica;
-    text-align: center;
     background-image:  url(../img/bg.png);
+    margin-left: 48px;
+    margin-right: 48px;
 }
 
 header
 {
     position: relative;
-    color: #E64D38;
-    margin-bottom: 24px;
-    font-family: 'Share', sans-serif;
-    line-height: 30px;
+    padding-top: 24px;
+    margin-bottom: 48px;
     font-size: 20px;
-    padding: 32px;
     text-align: left;
 }
 
@@ -27,40 +26,89 @@ header iframe
     bottom: 32px;
 }
 
+header h1
+{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #FFF;
+    margin-bottom: 0px;
+}
+
+
 header h2
 {
-    font-size: 42px !important;
+    margin-top: 0px;
+    font-size: 24px !important;
+    color: #E5342F;
 }
 
 .movie
 {
+    float: left;
     position: relative;
     margin: 0;
     width: 182px;
-    height: 275px;
+    height: 246px;
     overflow: hidden;
-    margin: 10px;
-    display: inline-block;
+    margin: 6px;
+    background-repeat: no-repeat;
+    border: 12px solid transparent;
 }
+
+.movie:hover
+{
+    border-color: #E5342F;
+}
+
+.movie .play
+{
+    opacity: 0;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 50%;
+    top: 50%;
+    margin-left: -45px;
+    margin-top: -45px;
+    background-size: 83px 83px;
+    background-image: url(../img/play.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+}
+
+.movie:hover .play
+{
+    opacity: 1;
+}
+
+.movie:hover .play:hover
+{
+    background-size: 90px 90px;
+}
+
 
 .movie .info
 {
+    z-index: 100;
     position: absolute;
+    text-align: center;
     background-color:  rgba(0,0,0,0.8);
-    height: 60px;
-    width: 182px;
-    bottom: -80px;
-    padding: 10px;
-    font-weight: bold;
+    height: 50px;
+    width: 162px;
+    top: -70px;
+    padding: 12px;
     color: #FFF !important;
+    line-height: 20px;
     -moz-transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
-
 }
 
 .movie:hover .info
 {
-    bottom: 0px;
+    top: 0px;
 }
 
 
@@ -71,18 +119,10 @@ header h2
 
 .popup
 {
-    width: 1043px !important;
+    width: 793px !important;
 }
 
-.movie_big
-{
-    float: left;
-    width: 250px;
-    height: 378px;
-    background-repeat: no-repeat;
-}
-
-iframe
+.popup iframe
 {
     float: left;
     height: 378px;

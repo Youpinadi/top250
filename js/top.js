@@ -262,16 +262,22 @@ $(document).ready(function(){
             videoId = movies[i][2];
         }
         var url = '/lang/en/relevance/search/' + encodeURIComponent('"' + movies[i][1] + '" trailer');
-        var posterUrl = 'http://ec.rszr.co/mod=fill&w=182&h=275&quality=100&mv=' + movieId;
-        $('<div>').addClass('movie')
+        var posterUrl = 'http://ec.rszr.co/w=182&h=246&mv=' + movieId;
+        var movie = $('<div>').addClass('movie')
+            .attr('data-video-url', url)
             .css('background-image', 'url(' + posterUrl + ')')
-            .data('movie-id', movieId)
             .appendTo(body);
+
+            movie.append('<div class="play"/>');
+            // movie.append('<img data-src="' + posterUrl +'" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="lzld(this)" />');
+
+        $('<div>').appendTo(movie)
+            .addClass('info')
+            .html(movies[i][1]);
     };
-    $('.movie').click(function(){
-        console.log($(this).attr('data-video-url'));
+    $('.movie .play').click(function(){
         jQuery.facebox({ div: '#box' });
-        $('.content').html('<div class="movie_big" style="background-image: url(http://ec.rszr.co/mod=fill&w=250&h=378&quality=100&mv=' + $(this).attr('data-movie-id') + ')"></div><iframe frameborder="0" src="http://www.dailymotion.com/swf/' + $(this).attr('data-video-url') +  '?autoplay=1"></iframe>');
+        $('.content').html('<iframe frameborder="0" src="http://www.dailymotion.com/swf/' + $(this).parent().attr('data-video-url') +  '?autoplay=1&highlight=E5342F"></iframe>');
     });
 
     $(document).bind('afterClose.facebox', function(){
