@@ -42,6 +42,13 @@ header h2
     color: #E5342F;
 }
 
+header h3
+{
+    color: #333;
+    font-size: 13px;
+}
+
+
 .movie
 {
     float: left;

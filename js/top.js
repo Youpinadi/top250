@@ -1,62 +1,62 @@
 var movies = [
-['tt0111161', 'The Shawshank Redemption'],
+['tt0111161', 'The Shawshank Redemption', 'xqir9a'],
 ['tt0068646', 'The Godfather'],
 ['tt0071562', 'The Godfather: Part II'],
 ['tt0060196', 'The Good, the Bad and the Ugly'],
-['tt0110912', 'Pulp Fiction', 'x9kxjn'],
-['tt0050083', '12 Angry Men'],
-['tt0108052', 'Schindler\'s List'],
-['tt0073486', 'One Flew Over the Cuckoo\'s Nest'],
-['tt0468569', 'The Dark Knight', 'xjz9xy'],
-['tt1375666', 'Inception', 'xboq9i'],
+['tt0110912', 'Pulp Fiction', 'xqitu8'],
+['tt0050083', '12 Angry Men', 'x56rtr'],
+['tt0108052', 'Schindler\'s List', 'xqisgd'],
+['tt0073486', 'One Flew Over the Cuckoo\'s Nest', 'x4xvwz'],
+['tt0468569', 'The Dark Knight', 'xqittr'],
+['tt1375666', 'Inception', 'xqishn'],
 ['tt0167260', 'The Lord of the Rings: The Return of the King'],
 ['tt0080684', 'Star Wars: Episode V - The Empire Strikes Back'],
-['tt0047478', 'Seven Samurai'],
-['tt0137523', 'Fight Club'],
-['tt0099685', 'Goodfellas'],
+['tt0047478', 'Seven Samurai', 'xqiryy'],
+['tt0137523', 'Fight Club', 'xqirib'],
+['tt0099685', 'Goodfellas', 'xqirj7'],
 ['tt0076759', 'Star Wars: Episode IV - A New Hope'],
 ['tt0120737', 'The Lord of the Rings: The Fellowship of the Ring'],
-['tt0317248', 'City of God'],
+['tt0317248', 'City of God', 'xqiu03'],
 ['tt0034583', 'Casablanca'],
 ['tt0064116', 'Once Upon a Time in the West'],
 ['tt0047396', 'Rear Window'],
-['tt0133093', 'The Matrix'],
+['tt0133093', 'The Matrix', 'xqisfx'],
 ['tt0082971', 'Raiders of the Lost Ark'],
-['tt0114814', 'The Usual Suspects'],
+['tt0114814', 'The Usual Suspects', 'xqish2'],
 ['tt0102926', 'The Silence of the Lambs'],
 ['tt0054215', 'Psycho'],
 ['tt0114369', 'Se7en'],
 ['tt0038650', 'It\'s a Wonderful Life'],
 ['tt0167261', 'The Lord of the Rings: The Two Towers'],
 ['tt0109830', 'Forrest Gump'],
-['tt0209144', 'Memento'],
+['tt0209144', 'Memento', 'xpway3'],
 ['tt0043014', 'Sunset Blvd.'],
 ['tt0110413', 'Leon: The Professional'],
-['tt0057012', 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb'],
-['tt0078788', 'Apocalypse Now'],
+['tt0057012', 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb', 'xqit7g'],
+['tt0078788', 'Apocalypse Now', 'xbfph4'],
 ['tt0120586', 'American History X'],
-['tt0435761', 'Toy Story 3'],
+['tt0435761', 'Toy Story 3', 'xqit0d'],
 ['tt0033467', 'Citizen Kane'],
 ['tt0053125', 'North by Northwest'],
 ['tt0169547', 'American Beauty'],
 ['tt0103064', 'Terminator 2: Judgment Day'],
-['tt0075314', 'Taxi Driver'],
+['tt0075314', 'Taxi Driver', 'xqirul'],
 ['tt0120815', 'Saving Private Ryan'],
 ['tt0078748', 'Alien'],
 ['tt0052357', 'Vertigo'],
 ['tt0245429', 'Spirited Away'],
-['tt0211915', 'Amélie'],
-['tt0081505', 'The Shining'],
+['tt0211915', 'Amélie', 'xpwcr9'],
+['tt0081505', 'The Shining', 'xqisnh'],
 ['tt0021749', 'City Lights'],
-['tt0050825', 'Paths of Glory'],
+['tt0050825', 'Paths of Glory', 'xqirrc'],
 ['tt0253474', 'The Pianist'],
-['tt0910970', 'WALL·E'],
+['tt0910970', 'WALL·E', 'x4ozdy'],
 ['tt0022100', 'M'],
 ['tt0036775', 'Double Indemnity'],
 ['tt0405094', 'The Lives of Others'],
-['tt0407887', 'The Departed'],
+['tt0407887', 'The Departed', 'xqirlf'],
 ['tt0056172', 'Lawrence of Arabia'],
-['tt0066921', 'A Clockwork Orange'],
+['tt0066921', 'A Clockwork Orange', 'xqitaq'],
 ['tt0056592', 'To Kill a Mockingbird'],
 ['tt0090605', 'Aliens'],
 ['tt0180093', 'Requiem for a Dream'],
@@ -67,13 +67,13 @@ var movies = [
 ['tt0105236', 'Reservoir Dogs'],
 ['tt0041959', 'The Third Man'],
 ['tt0088763', 'Back to the Future'],
-['tt0119488', 'L.A. Confidential'],
+['tt0119488', 'L.A. Confidential', 'xqitj1'],
 ['tt0071315', 'Chinatown'],
 ['tt0482571', 'The Prestige'],
 ['tt0040897', 'The Treasure of the Sierra Madre'],
 ['tt0095765', 'Cinema Paradiso'],
 ['tt0120689', 'The Green Mile'],
-['tt0071853', 'Monty Python and the Holy Grail'],
+['tt0071853', 'Monty Python and the Holy Grail', 'xqirvi'],
 ['tt0087843', 'Once Upon a Time in America'],
 ['tt0081398', 'Raging Bull'],
 ['tt0042876', 'Rashomon'],
@@ -83,22 +83,22 @@ var movies = [
 ['tt0457430', 'Pan\'s Labyrinth'],
 ['tt0042192', 'All About Eve'],
 ['tt0032553', 'The Great Dictator'],
-['tt0093058', 'Full Metal Jacket'],
-['tt0050212', 'The Bridge on the River Kwai'],
-['tt0040522', 'Bicycle Thieves'],
-['tt0062622', '2001: A Space Odyssey'],
-['tt0172495', 'Gladiator'],
-['tt0112573', 'Braveheart'],
+['tt0093058', 'Full Metal Jacket', 'xdwohx'],
+['tt0050212', 'The Bridge on the River Kwai', 'xqitq8'],
+['tt0040522', 'Bicycle Thieves', 'xqito9'],
+['tt0062622', '2001: A Space Odyssey', 'xqirxt'],
+['tt0172495', 'Gladiator', 'xqitmb'],
+['tt0112573', 'Braveheart', 'xqitky'],
 ['tt0053604', 'The Apartment'],
 ['tt0017136', 'Metropolis'],
-['tt0361748', 'Inglourious Basterds'],
+['tt0361748', 'Inglourious Basterds', 'xqit66'],
 ['tt0363163', 'Downfall'],
-['tt0364569', 'Oldboy'],
+['tt0364569', 'Oldboy', 'xqirzh'],
 ['tt0105695', 'Unforgiven'],
 ['tt0070735', 'The Sting'],
 ['tt1205489', 'Gran Torino'],
 ['tt0080678', 'The Elephant Man'],
-['tt1049413', 'Up'],
+['tt1049413', 'Up', 'xqit2j'],
 ['tt0031679', 'Mr. Smith Goes to Washington'],
 ['tt0086190', 'Star Wars: Episode VI - Return of the Jedi'],
 ['tt0033870', 'The Maltese Falcon'],
@@ -109,7 +109,7 @@ var movies = [
 ['tt0095016', 'Die Hard'],
 ['tt0057115', 'The Great Escape'],
 ['tt0947798', 'Black Swan'],
-['tt0401792', 'Sin City'],
+['tt0401792', 'Sin City', 'xqisvj'],
 ['tt0050976', 'The Seventh Seal'],
 ['tt0372784', 'Batman Begins'],
 ['tt0017925', 'The General'],
@@ -123,25 +123,25 @@ var movies = [
 ['tt0395169', 'Hotel Rwanda'],
 ['tt0073195', 'Jaws'],
 ['tt0051201', 'Witness for the Prosecution'],
-['tt0208092', 'Snatch.'],
+['tt0208092', 'Snatch.', 'xqitbo'],
 ['tt0089881', 'Ran'],
 ['tt0477348', 'No Country for Old Men'],
 ['tt1201607', 'Harry Potter and the Deathly Hallows: Part 2'],
-['tt0110357', 'The Lion King'],
+['tt0110357', 'The Lion King', 'xqisti'],
 ['tt0050986', 'Wild Strawberries'],
 ['tt0052311', 'Touch of Evil'],
 ['tt0032138', 'The Wizard of Oz'],
 ['tt0118715', 'The Big Lebowski'],
 ['tt0077416', 'The Deer Hunter'],
 ['tt0167404', 'The Sixth Sense'],
-['tt1010048', 'Slumdog Millionaire'],
+['tt1010048', 'Slumdog Millionaire', 'xqitlv'],
 ['tt0114709', 'Toy Story'],
 ['tt0061512', 'Cool Hand Luke'],
 ['tt0075686', 'Annie Hall'],
 ['tt0044079', 'Strangers on a Train'],
 ['tt0025316', 'It Happened One Night'],
 ['tt0266697', 'Kill Bill: Vol. 1'],
-['tt0246578', 'Donnie Darko'],
+['tt0246578', 'Donnie Darko', 'xqisyk'],
 ['tt0044706', 'High Noon'],
 ['tt0091763', 'Platoon'],
 ['tt0758758', 'Into the Wild'],
@@ -185,10 +185,10 @@ var movies = [
 ['tt0083987', 'Gandhi'],
 ['tt0055031', 'Judgment at Nuremberg'],
 ['tt0119217', 'Good Will Hunting'],
-['tt0499549', 'Avatar'],
+['tt0499549', 'Avatar', 'xqitf0'],
 ['tt0074958', 'Network'],
 ['tt0048424', 'The Night of the Hunter'],
-['tt0382932', 'Ratatouille'],
+['tt0382932', 'Ratatouille', 'xqitci'],
 ['tt0056801', '8½'],
 ['tt0058946', 'The Battle of Algiers'],
 ['tt0053198', 'The 400 Blows'],
@@ -208,7 +208,7 @@ var movies = [
 ['tt0044081', 'A Streetcar Named Desire'],
 ['tt1285016', 'The Social Network'],
 ['tt0083922', 'Fanny and Alexander'],
-['tt0317705', 'The Incredibles'],
+['tt0317705', 'The Incredibles', 'xqit46'],
 ['tt0072684', 'Barry Lyndon'],
 ['tt0041546', 'Kind Hearts and Coronets'],
 ['tt0019254', 'The Passion of Joan of Arc'],
@@ -247,7 +247,7 @@ var movies = [
 ['tt0028950', 'Grand Illusion'],
 ['tt0268978', 'A Beautiful Mind'],
 ['tt0023969', 'Duck Soup'],
-['tt0079944', 'Stalker'],
+['tt0079944', 'Stalker', 'xqite7'],
 ['tt0498380', 'Letters from Iwo Jima']
 ];
 
@@ -257,15 +257,16 @@ var Top =
     {
         $(this).parent().toggleClass('watched');
     },
+    playMovie: function(event)
+    {
+        jQuery.facebox({ div: '#box' });
+        $('.content').html('<iframe frameborder="0" src="http://www.dailymotion.com/swf/' + $(this).parent().attr('data-video-url') +  '?autoplay=1&highlight=E5342F"></iframe>');
+    },
     init: function()
     {
         $(document).ready(function(){
             var moviesContainer = $('#movies');
-            var play = $('<div id="play"/>')
-                .click(function(){
-                    jQuery.facebox({ div: '#box' });
-                    $('.content').html('<iframe frameborder="0" src="http://www.dailymotion.com/swf/' + $(this).parent().attr('data-video-url') +  '?autoplay=1&highlight=E5342F"></iframe>');
-                });
+            var play = $('<div id="play"/>');
 
             var check = $('<div id="check"/>')
                 .html('✔');
@@ -273,20 +274,22 @@ var Top =
             var watched = $('<div id="watched"/>')
                 .attr('title', "i'v seen it");
 
-
+            var trailersCount = 0;
             for (var i in movies)
             {
                 var movieId = movies[i][0];
-                var videoId = 'x9kxjn';
+                var videoId = false;
+                var url = '/lang/en/relevance/search/' + encodeURIComponent('"' + movies[i][1] + '" trailer');
                 if (movies[i][2])
                 {
                     videoId = movies[i][2];
+                    url = '/video/' + videoId;
+                    trailersCount ++;
                 }
-                var url = '/lang/en/relevance/search/' + encodeURIComponent('"' + movies[i][1] + '" trailer');
                 var posterUrl = 'http://ec.rszr.co/w=182&h=246&mv=' + movieId;
                 var movie = $('<div>').addClass('movie')
                     .attr('data-video-url', url)
-                    .attr('data-video-id', movieId)
+                    .attr('data-video-id', videoId)
                     .css('background-image', 'url(' + posterUrl + ')')
                     .appendTo(moviesContainer);
 
@@ -296,8 +299,12 @@ var Top =
                     .addClass('info')
                     .html(movies[i][1]);
             };
+            $('<h3>').html('trailers count: ' + trailersCount).appendTo($('header'));
             $('.movie').mouseenter(function(){
-                play.appendTo($(this));
+                if ($(this).attr('data-video-id') != 'false')
+                {
+                    play.appendTo($(this));
+                }
                 watched.appendTo($(this));
                 check.appendTo($(this));
             }).mouseleave(function(){
@@ -307,6 +314,7 @@ var Top =
             });
 
             $('#movies').on('click', '#check, #watched', Top.checkMovie);
+            $('#movies').on('click', '#play', Top.playMovie);
 
             $(document).bind('afterClose.facebox', function(){
                 $('.content').html('');
