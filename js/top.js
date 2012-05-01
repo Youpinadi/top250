@@ -251,36 +251,67 @@ var movies = [
 ['tt0498380', 'Letters from Iwo Jima']
 ];
 
-$(document).ready(function(){
-    var body = $('body');
-    for (var i in movies)
+var Top =
+{
+    checkMovie: function(event)
     {
-        var movieId = movies[i][0];
-        var videoId = 'x9kxjn';
-        if (movies[i][2])
-        {
-            videoId = movies[i][2];
-        }
-        var url = '/lang/en/relevance/search/' + encodeURIComponent('"' + movies[i][1] + '" trailer');
-        var posterUrl = 'http://ec.rszr.co/w=182&h=246&mv=' + movieId;
-        var movie = $('<div>').addClass('movie')
-            .attr('data-video-url', url)
-            .css('background-image', 'url(' + posterUrl + ')')
-            .appendTo(body);
+        $(this).parent().toggleClass('watched');
+    },
+    init: function()
+    {
+        $(document).ready(function(){
+            var moviesContainer = $('#movies');
+            var play = $('<div id="play"/>')
+                .click(function(){
+                    jQuery.facebox({ div: '#box' });
+                    $('.content').html('<iframe frameborder="0" src="http://www.dailymotion.com/swf/' + $(this).parent().attr('data-video-url') +  '?autoplay=1&highlight=E5342F"></iframe>');
+                });
 
-            movie.append('<div class="play"/>');
-            // movie.append('<img data-src="' + posterUrl +'" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="lzld(this)" />');
+            var check = $('<div id="check"/>')
+                .html('✔');
 
-        $('<div>').appendTo(movie)
-            .addClass('info')
-            .html(movies[i][1]);
-    };
-    $('.movie .play').click(function(){
-        jQuery.facebox({ div: '#box' });
-        $('.content').html('<iframe frameborder="0" src="http://www.dailymotion.com/swf/' + $(this).parent().attr('data-video-url') +  '?autoplay=1&highlight=E5342F"></iframe>');
-    });
+            var watched = $('<div id="watched"/>')
+                .attr('title', "i'v seen it");
 
-    $(document).bind('afterClose.facebox', function(){
-        $('.content').html('');
-    })
-});
+
+            for (var i in movies)
+            {
+                var movieId = movies[i][0];
+                var videoId = 'x9kxjn';
+                if (movies[i][2])
+                {
+                    videoId = movies[i][2];
+                }
+                var url = '/lang/en/relevance/search/' + encodeURIComponent('"' + movies[i][1] + '" trailer');
+                var posterUrl = 'http://ec.rszr.co/w=182&h=246&mv=' + movieId;
+                var movie = $('<div>').addClass('movie')
+                    .attr('data-video-url', url)
+                    .attr('data-video-id', movieId)
+                    .css('background-image', 'url(' + posterUrl + ')')
+                    .appendTo(moviesContainer);
+
+                    // movie.append('<img data-src="' + posterUrl +'" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="lzld(this)" />');
+
+                $('<div>').appendTo(movie)
+                    .addClass('info')
+                    .html(movies[i][1]);
+            };
+            $('.movie').mouseenter(function(){
+                play.appendTo($(this));
+                watched.appendTo($(this));
+                check.appendTo($(this));
+            }).mouseleave(function(){
+                play.remove();
+                watched.remove();
+                check.remove();
+            });
+
+            $('#movies').on('click', '#check, #watched', Top.checkMovie);
+
+            $(document).bind('afterClose.facebox', function(){
+                $('.content').html('');
+            })
+        });
+    }
+}
+Top.init();

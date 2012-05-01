@@ -60,7 +60,8 @@ header h2
     border-color: #E5342F;
 }
 
-.movie .play
+
+.movie #play
 {
     opacity: 0;
     position: absolute;
@@ -79,14 +80,74 @@ header h2
     -webkit-transition: all 0.1s linear;
 }
 
-.movie:hover .play
+.movie:hover #play
 {
     opacity: 1;
 }
 
-.movie:hover .play:hover
+#play:hover
 {
     background-size: 90px 90px;
+}
+
+#watched
+{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    bottom: 0px;
+    right: 0px;
+    font-size: 0px;
+    line-height: 0%; width: 0px;
+    border-top: none;
+    border-bottom: 48px solid #E5342F;
+    border-left: 48px solid transparent;
+    border-right: none;
+    cursor: pointer;
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+}
+
+.movie.watched
+{
+    border-color: #424242;
+}
+
+.movie.watched #watched
+{
+    border-color: #424242;
+    border-left: 48px solid transparent;
+    border-bottom: 48px solid #424242;
+}
+.movie.watched #check
+{
+    color: green;
+}
+
+
+#movies
+{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+#check
+{
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#check:hover
+{
+    color: #CCC;
 }
 
 
@@ -102,8 +163,8 @@ header h2
     padding: 12px;
     color: #FFF !important;
     line-height: 20px;
-    -moz-transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
 }
 
 .movie:hover .info
